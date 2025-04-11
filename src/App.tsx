@@ -8,9 +8,6 @@ import Index from "./pages/Index";
 import Share from "./pages/Share";
 import NotFound from "./pages/NotFound";
 
-// Add Supabase
-import '@/lib/supabase';
-
 const queryClient = new QueryClient();
 
 const App = () => (

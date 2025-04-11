@@ -1,12 +1,6 @@
 
-import { createClient } from '@supabase/supabase-js';
-
-// These are fallback values - public URL is typically fine to expose
-// For actual API keys, the user should connect their Supabase account
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Import the already configured Supabase client
+import { supabase } from '@/integrations/supabase/client';
 
 export type VideoItem = {
   id: string;
@@ -20,3 +14,6 @@ export type Collection = {
   videos: VideoItem[];
   created_at?: string;
 };
+
+// Re-export the supabase client
+export { supabase };
