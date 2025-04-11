@@ -10,6 +10,7 @@ import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import "./index.css";
 
 const queryClient = new QueryClient();
 

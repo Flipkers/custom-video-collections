@@ -23,12 +23,13 @@ const VideoCard: React.FC<VideoCardProps> = ({
   onRemove
 }) => {
   return (
-    <div className="video-card bg-card rounded-lg overflow-hidden border border-border">
+    <div className="video-card bg-card rounded-lg overflow-hidden border border-border shadow-md">
       <div className="relative aspect-video">
         <img 
           src={video.thumbnail} 
           alt={video.title} 
           className="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
       <div className="p-3">
@@ -41,7 +42,7 @@ const VideoCard: React.FC<VideoCardProps> = ({
             className="text-xs text-muted-foreground hover:text-accent flex items-center gap-1"
           >
             <ExternalLink size={14} />
-            Watch on YouTube
+            Watch
           </a>
           {!inCollection ? (
             <Button 

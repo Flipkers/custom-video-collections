@@ -59,15 +59,15 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="container max-w-7xl mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 max-w-full lg:max-w-7xl">
         <Tabs defaultValue="search" className="w-full">
-          <TabsList className="grid w-[400px] grid-cols-2 mb-8">
+          <TabsList className="grid w-full max-w-[400px] mx-auto grid-cols-2 mb-8">
             <TabsTrigger value="search">Search Videos</TabsTrigger>
             <TabsTrigger value="collection">My Collection</TabsTrigger>
           </TabsList>
           
           <TabsContent value="search" className="space-y-4">
-            <form onSubmit={handleSearch} className="flex gap-2">
+            <form onSubmit={handleSearch} className="flex gap-2 max-w-2xl mx-auto">
               <Input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}

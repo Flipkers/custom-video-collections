@@ -18,7 +18,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({
 }) => {
   if (isLoading) {
     return (
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {[...Array(6)].map((_, i) => (
           <div key={i} className="bg-secondary rounded-lg h-64 animate-pulse" />
         ))}
@@ -35,8 +35,8 @@ const SearchResults: React.FC<SearchResultsProps> = ({
   }
 
   return (
-    <ScrollArea className="h-[500px] pr-4 mt-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <ScrollArea className="h-[calc(100vh-250px)] mt-4 pr-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {results.map((result) => (
           <VideoCard
             key={result.id.videoId}

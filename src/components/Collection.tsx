@@ -95,8 +95,8 @@ const Collection: React.FC<CollectionProps> = ({
             <p>Your collection is empty. Search and add videos!</p>
           </div>
         ) : (
-          <ScrollArea className="h-[400px]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ScrollArea className="h-[calc(100vh-250px)]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {collection.videos.map((video) => (
                 <VideoCard
                   key={video.id}

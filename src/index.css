@@ -44,12 +44,29 @@
     @apply border-border;
   }
   
-  body {
-    @apply bg-background text-foreground;
+  html, body {
+    @apply bg-background text-foreground h-full;
     font-family: 'Inter', sans-serif;
+  }
+  
+  #root {
+    @apply h-full;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
   .video-card {
     @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
   }
+  
+  /* Ensure scroll area container has proper space */
+  .scrollbar-thumb {
+    @apply bg-accent/50;
+  }
+}
+
+/* Remove App.css styles */
+.logo, .card, .read-the-docs {
+  display: none;
 }
